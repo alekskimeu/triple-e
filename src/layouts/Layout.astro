@@ -8,6 +8,30 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<header class="h-[4rem] py-4 !mb-3 header">
+			<div class="container flex justify-between items-center h-[100%] border-b">
+				<h1>Triple E</h1>
+				<nav>
+					<ul class="flex items-center gap-10">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/">About</a>
+						</li>
+						<li>
+							<a href="/">News</a>
+						</li>
+						<li>
+							<a href="/">Events</a>
+						</li>
+						<li>
+							<a href="/" class="bg-amber-300 !py-2.5 !px-3.5 rounded-lg inline-block">Get involved</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 		<slot />
 	</body>
 </html>
