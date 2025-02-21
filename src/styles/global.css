@@ -11,6 +11,11 @@
   margin: auto;
 }
 
+/* Header */
+.header > .container {
+  border-bottom: 1px solid #dfdfdf;
+}
+
 /* Hero */
 .hero > .container {
   background-image: linear-gradient(
