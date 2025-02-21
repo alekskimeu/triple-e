@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Concert+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Concert+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   padding: 0;
@@ -23,12 +23,17 @@ a,
 span,
 li,
 button {
-  letter-spacing: 1.5px;
-  line-height: 1.5;
+  letter-spacing: 1.8px;
+  line-height: 1.7;
 }
 
-p {
-  font-family: "Barlow", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -38,7 +43,7 @@ p {
 
 /* Header */
 .header > .container {
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid #ececec;
 }
 
 .header .container .logo {
@@ -138,4 +143,35 @@ p {
 
 .activities .activity:hover .content {
   background-color: #016e81;
+}
+
+/* Footer */
+footer {
+  min-height: 15rem;
+}
+
+footer .container {
+  border-top: 1px solid #eeeeee;
+}
+
+footer .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+footer .logo {
+  font-family: "Concert One", sans-serif;
+}
+
+footer ul li {
+  font-size: 1rem;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
