@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets"
+
+const {title, description, image} = Astro.props
+---
+
+<div class="activity h-[350px]">
+    <div class="image-container">
+        <Image src={image} alt={title} />
+    </div>
+    <div class="content">
+        <h4 class="font-semibold text-2xl !mb-4 uppercase title">{title}</h4>
+        <p class="text-lg">{description}</p>
+    </div>
+</div>
