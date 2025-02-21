@@ -9,7 +9,10 @@ const {title, description, image} = Astro.props
         <Image src={image} alt={title} />
     </div>
     <div class="content">
-        <h4 class="font-semibold text-2xl !mb-4 uppercase title">{title}</h4>
-        <p class="text-lg">{description}</p>
+        <h4 class="font-semibold text-2xl !mb-4 uppercase flex items-center justify-between">
+            {title} 
+            <i class="fas fa-arrow-right-long text-xs text-gray-300"></i> 
+        </h4>
+        <p class="text-[1.1rem] text-gray-200 font-normal">{description}</p>
     </div>
 </div>
