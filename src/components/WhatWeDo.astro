@@ -1,0 +1,15 @@
+---
+import { activities } from "../data/data"
+import Activity from "./Activity.astro"
+---
+
+<section class="!py-20">
+    <div class="container">
+        <div class="activities">
+            {activities?.map(activity => (
+            <Activity title={activity.title} description={activity.description} image={activity.image}  />
+            ))} 
+        </div>
+        
+    </div>
+</section>
