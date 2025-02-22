@@ -149,6 +149,7 @@ h6 {
 /* Footer */
 footer {
   min-height: 15rem;
+  padding: 0 1rem;
 }
 
 footer .container {
@@ -226,5 +227,11 @@ footer .copyright {
 
   .activities .activity .content {
     padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer .content {
+    flex-direction: column;
   }
 }
