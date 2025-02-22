@@ -205,12 +205,16 @@ footer .copyright {
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    /* padding: 0 1rem; */
   }
 
   .activities .activity {
     grid-template-columns: 1fr;
     min-height: 750px;
+  }
+
+  .activities .activity .image-container {
+    height: 100%;
+    width: 100%;
   }
 
   .activities .activity:nth-child(odd) .image-container {
@@ -233,12 +237,21 @@ footer .copyright {
     border-top-right-radius: 0rem;
   }
 
+  .activities .activity:last-child .image-container,
+  .activities .activity:last-child .image-container img {
+    border-bottom-right-radius: 0rem;
+  }
+
   .activities .activity .content {
-    padding: 3rem 2rem;
+    padding: 2rem;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .activities .activity .content {
+    padding: 1rem;
+  }
+
   footer .content {
     flex-direction: column;
   }
