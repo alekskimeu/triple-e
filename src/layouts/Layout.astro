@@ -18,9 +18,13 @@ import Footer from "../components/Footer.astro";
 		<title>Triple E</title>
 	</head>
 	<body>
-		<Header />
-		<slot />
-		<Footer />
+		<div id="page-container">
+			<div class="content-wrap">
+				<Header />
+				<slot />
+			</div>
+			<Footer />
+		</div>
 	</body>
 </html>
 
