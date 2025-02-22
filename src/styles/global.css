@@ -51,8 +51,8 @@ h6 {
 }
 
 /* Header */
-.header > .container {
-  border-bottom: 1px solid #ececec;
+.header {
+  border-bottom: 1px solid #f5f5f5;
 }
 
 .header .container .logo {
@@ -160,8 +160,8 @@ footer {
   padding: 0 1rem;
 }
 
-footer .container {
-  border-top: 1px solid #eeeeee;
+footer {
+  border-top: 1px solid #f5f5f5;
 }
 
 footer .content {
