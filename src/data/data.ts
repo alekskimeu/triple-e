@@ -1,5 +1,9 @@
 import image from "../assets/hero.jpeg";
+import integrity from "../assets/integrity.png";
+import mission from "../assets/mission.png";
+import vision from "../assets/vision.png";
 
+// Activities
 export const activities = [
   {
     image,
@@ -18,5 +22,43 @@ export const activities = [
     title: "Elevate",
     description:
       "Together, we rise. Through collaboration, leadership development, and meaningful opportunities, we uplift our community and create pathways for success.",
+  },
+];
+
+// Core values
+export const values = [
+  {
+    icon: integrity,
+    title: "Integrity",
+    description:
+      "The world breaks everyone, and afterwards, many are strong at the broken places.",
+  },
+  {
+    icon: integrity,
+    title: "Integrity",
+    description:
+      "The world breaks everyone, and afterwards, many are strong at the broken places.",
+  },
+  {
+    icon: integrity,
+    title: "Integrity",
+    description:
+      "The world breaks everyone, and afterwards, many are strong at the broken places.",
+  },
+];
+
+// Mission, vision
+export const statements = [
+  {
+    image: image,
+    title: "Mission",
+    description:
+      "The world breaks everyone, and afterwards, many are strong at the broken places. The world breaks everyone, and afterwards, many are strong at the broken places. The world breaks everyone, and afterwards, many are strong at the broken places.",
+  },
+  {
+    image: image,
+    title: "Vision",
+    description:
+      "The world breaks everyone, and afterwards, many are strong at the broken places. The world breaks everyone, and afterwards, many are strong at the broken places. The world breaks everyone, and afterwards, many are strong at the broken places.",
   },
 ];

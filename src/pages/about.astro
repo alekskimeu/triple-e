@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero, AboutGallery, AboutContent, Values, Mission } from "../components/about"
+
+import { statements } from '../data/data'
+
+---
+
+
+<Layout>
+    <Hero />
+    <section class="!py-16">
+        <div class="container">
+            <div class="about-container">
+                <AboutGallery />
+                <AboutContent />
+            </div>
+
+            <div class="mission-vision">
+                {
+                    statements.map(statement => (
+                        <Mission statement={statement} />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+    <Values />
+</Layout>
+
+<style>
+    .about-container {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .mission-vision {
+        margin-top: 10rem;
+        padding: 0 2rem;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .about-container {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>

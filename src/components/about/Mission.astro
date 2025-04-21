@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets"
+
+const  { title, image, description } = Astro.props.statement
+---
+
+<div class="statement">
+    <div class="image-container">
+        <Image src={image} alt={title} />
+    </div>
+    <div>
+        <h2 class="font-semibold text-2xl !mb-4">{title}</h2>
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+    .statement {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .statement > .image-container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border-radius: .8rem;
+    }
+
+    .statement:first-child > .image-container {
+        order: 2;
+        justify-self: end;
+    }
+
+    .statement > .image-container::after {
+        position: absolute;
+        content: "";
+        background-color: #ecc6a7;
+        height: 100%;
+        width: 100%;
+        top: 2.5rem;
+        z-index: -1;
+        border-radius: .8rem;
+    }
+
+    .statement:first-child > .image-container::after {
+        right: -2.5rem;
+    }
+
+    .statement:last-child > .image-container::after {
+        left: -2.5rem;
+    }
+
+    .statement img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: .8rem;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .statement {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .statement:first-child > .image-container {
+            order: -1;
+            justify-self: center;
+        }
+
+        .statement:first-child > .image-container::after {
+            right: 0;
+            left: -2.5rem;
+        }
+
+        .statement .image-container {
+            margin-bottom: 2rem;
+            justify-self: center;
+        }
+    }
+</style>
