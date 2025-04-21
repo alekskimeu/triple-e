@@ -1,0 +1,48 @@
+---
+import Value from "./Value.astro";
+
+import { values } from "../../data/data"
+
+---
+
+<section class="core-values">
+    <div class="container">
+        <div class="!mb-10 heading">
+            <h2 class="text-2xl font-semibold !mb-1">Our Values</h2>
+            <p>The world breaks everyone, and afterwards, many are strong at the broken places.</p>
+        </div>
+        <div class="values">
+            {
+                values.map(value => (
+                    <Value title={value.title} icon={value.icon} description={value.description} />
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .heading {
+        max-width: 742px;
+    }
+
+    .core-values {
+        padding: 5rem 2rem;
+    }
+
+    .values {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .heading {
+            text-align: center;
+        }
+
+        .values {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
